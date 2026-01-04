@@ -44,6 +44,11 @@ from .models.interface import Model, ModelProvider, ModelTracing
 from .models.openai_chatcompletions import OpenAIChatCompletionsModel
 from .models.openai_provider import OpenAIProvider
 from .models.openai_responses import OpenAIResponsesModel
+from .models.anthropic_oauth_provider import (
+    AnthropicOAuthProvider,
+    get_anthropic_oauth_model,
+    configure_anthropic_oauth_env,
+)
 from .result import RunResult, RunResultStreaming
 from .run import RunConfig, Runner
 from .run_context import RunContextWrapper, TContext
@@ -156,6 +161,9 @@ __all__ = [
     "OpenAIChatCompletionsModel",
     "OpenAIProvider",
     "OpenAIResponsesModel",
+    "AnthropicOAuthProvider",
+    "get_anthropic_oauth_model",
+    "configure_anthropic_oauth_env",
     "AgentOutputSchema",
     "Computer",
     "AsyncComputer",
